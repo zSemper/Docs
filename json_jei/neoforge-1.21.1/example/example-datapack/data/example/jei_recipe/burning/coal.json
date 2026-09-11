@@ -1,0 +1,23 @@
+{
+  "type": "example:burning",
+  "burning_material": {
+    "type": "neoforge:compound",
+    "children": [
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ]
+  },
+  "energy": 2500,
+  "values": {
+    "progress": {
+      "ticks": 200
+    },
+    "time": {
+      "ticks": 200
+    }
+  }
+}

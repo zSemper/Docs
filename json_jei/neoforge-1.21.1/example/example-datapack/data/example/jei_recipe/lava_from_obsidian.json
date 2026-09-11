@@ -1,0 +1,16 @@
+{
+  "type": "example:melting",
+  "input": {
+    "item": "minecraft:obsidian"
+  },
+  "output": {
+    "id": "minecraft:lava",
+    "amount": 1000
+  },
+  "energy": 4000,
+  "values": {
+    "progress": {
+      "time": 200
+    }
+  }
+}

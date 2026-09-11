@@ -1,0 +1,68 @@
+{
+  "uid": "example:freezing",
+  "title": "example.freezing.category",
+  "icon": "minecraft:ice",
+  "background": {
+    "texture": "example:textures/gui/jei",
+    "width": 90,
+    "height": 36,
+    "u": 0,
+    "v": 0
+  },
+  "catalysts": [
+    "minecraft:ice",
+    "minecraft:packed_ice",
+    "minecraft:blue_ice"
+  ],
+  "recipe_layout": {
+    "input": [
+      {
+        "type": "json_jei:item",
+        "key": "coolant",
+        "x": 37,
+        "y": 1
+      },
+      {
+        "type": "json_jei:fluid",
+        "key": "cooling",
+        "x": 1,
+        "y": 19
+      }
+    ],
+    "output": [
+      {
+        "type": "json_jei:item",
+        "key": "output",
+        "x": 73,
+        "y": 19
+      }
+    ]
+  },
+  "rendering": [
+    {
+      "type": "json_jei:texture",
+      "key": "progress",
+      "texture": "example:textures/gui/progress_arrow",
+      "width": 40,
+      "height": 17,
+      "x": 25,
+      "y": 18,
+      "time": 100
+    },
+    {
+      "type": "json_jei:tooltip",
+      "key": "progress_time",
+      "width": 40,
+      "height": 17,
+      "x": 25,
+      "y": 18,
+      "tooltip": [
+        "example.freezing.progress_time",
+        "$(s:time)"
+      ],
+      "values": {
+        "time": "100 Ticks"
+      }
+    }
+  ]
+}

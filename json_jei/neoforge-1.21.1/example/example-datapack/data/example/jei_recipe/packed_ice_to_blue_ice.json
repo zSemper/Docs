@@ -1,0 +1,26 @@
+{
+  "type": "example:freezing",
+  "coolant": {
+    "item": "minecraft:packed_ice"
+  },
+  "cooling": {
+    "fluid": "minecraft:water",
+    "amount": 1000
+  },
+  "output": {
+    "id": "minecraft:blue_ice"
+  },
+  "progress": {
+    "texture": "example:textures/gui/progress_arrow",
+    "width": 40,
+    "height": 17,
+    "x": 25,
+    "y": 18,
+    "time": 200
+  },
+  "values": {
+    "progress_time": {
+      "time": "200 Ticks"
+    }
+  }
+}

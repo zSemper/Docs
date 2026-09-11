@@ -1,0 +1,69 @@
+{
+  "uid": "example:burning",
+  "title": "example.burning.category",
+  "icon": {
+    "texture": "example:textures/gui/burning",
+    "u": 14,
+    "v": 0,
+    "width": 14,
+    "height": 14,
+    "texture_width": 28,
+    "texture_height": 14
+  },
+  "background": {
+    "width": 63,
+    "height": 46
+  },
+  "recipe_layout": {
+    "input": [
+      {
+        "type": "json_jei:item",
+        "key": "burning_material",
+        "x": 1,
+        "y": 9,
+        "has_background": true
+      }
+    ],
+    "output": [
+      {
+        "type": "json_jei:energy",
+        "key": "energy",
+        "x": 49,
+        "y": 1,
+        "width": 14,
+        "height": 32,
+        "has_background": true
+      }
+    ]
+  },
+  "rendering": [
+    {
+      "type": "json_jei:texture",
+      "texture": "example:textures/gui/progress_arrow",
+      "key": "base_progress",
+      "width": 22,
+      "height": 15,
+      "x": 22,
+      "y": 9,
+      "v": 17
+    },
+    {
+      "type": "json_jei:texture",
+      "texture": "example:textures/gui/progress_arrow",
+      "key": "progress",
+      "width": 22,
+      "height": 16,
+      "x": 22,
+      "y": 9,
+      "v": 32,
+      "time": "$(i:ticks)"
+    },
+    {
+      "type": "json_jei:time",
+      "key": "time",
+      "x": 25,
+      "y": 29,
+      "time": "$(i:ticks)"
+    }
+  ]
+}

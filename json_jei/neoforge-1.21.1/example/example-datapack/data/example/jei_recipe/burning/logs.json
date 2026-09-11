@@ -1,0 +1,15 @@
+{
+  "type": "example:burning",
+  "burning_material": {
+    "tag": "minecraft:logs_that_burn"
+  },
+  "energy": 250,
+  "values": {
+    "progress": {
+      "ticks": 100
+    },
+    "time": {
+      "ticks": 50
+    }
+  }
+}

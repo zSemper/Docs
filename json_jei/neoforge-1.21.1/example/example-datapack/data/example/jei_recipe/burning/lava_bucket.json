@@ -1,0 +1,15 @@
+{
+  "type": "example:burning",
+  "burning_material": {
+    "item": "minecraft:lava_bucket"
+  },
+  "energy": 10000,
+  "values": {
+    "progress": {
+      "ticks": 1000
+    },
+    "time": {
+      "ticks": 1000
+    }
+  }
+}

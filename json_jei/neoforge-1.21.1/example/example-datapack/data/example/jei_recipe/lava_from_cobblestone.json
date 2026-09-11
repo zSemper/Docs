@@ -1,0 +1,17 @@
+{
+  "type": "example:melting",
+  "input": {
+    "tag": "c:cobblestones",
+    "count": 2
+  },
+  "output": {
+    "id": "minecraft:lava",
+    "amount": 250
+  },
+  "energy": 2000,
+  "values": {
+    "progress": {
+      "time": 100
+    }
+  }
+}
