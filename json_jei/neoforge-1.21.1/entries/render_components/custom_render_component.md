@@ -51,12 +51,11 @@ void render(GuiGraphics guiGraphics, @Nullable JsonElement override, JsonObject 
 To properly decode reference values `JsonRenderComponent` provides a helper method:
 
 ```java
-default /*final*/ <T> T decode(Codec<T> codec, String key, Supplier<T> value);
+default /*final*/ <T> T decode(Codec<T> codec, ReferenceValue<T> value, JsonElement recipeValues);
 ```
 
-The `codec` field is the codec the reference value has. The `key` is the name of the specific value that's
-supposed to be decoded, and the `value` field is the supplier to resolve the reference value:
-`() -> [referenceValue].resolve(key -> [resolver])`.
+The `codec` field is the codec the reference value has. The `value` field is the reference value and 
+`recipeValues` is the `JsonObject` that holds the values to all reference values.
 
 <br>
 
@@ -105,10 +104,10 @@ public record SpriteRenderComponent(
             return;
         }
 
-        int dx = decode(Codec.INT, "x", () -> x.resolve(key -> GsonHelper.getAsInt(recipeValues, key)));
-        int dy = decode(Codec.INT, "y", () -> y.resolve(key -> GsonHelper.getAsInt(recipeValues, key)));
-        int dWidth = decode(Codec.INT, "width", () -> width.resolve(key -> GsonHelper.getAsInt(recipeValues, key)));
-        int dHeight = decode(Codec.INT, "height", () -> height.resolve(key -> GsonHelper.getAsInt(recipeValues, key)));
+        int dx = decode(Codec.INT, "x", x, recipeValues);
+        int dy = decode(Codec.INT, "y", y, recipeValues);
+        int dWidth = decode(Codec.INT, "width", width, recipeValues);
+        int dHeight = decode(Codec.INT, "height", height, recipeValues);
 
         guiGraphics.blitSprite(JsonJei.validateTexture(texture), dx, dy, dWidth, dHeight);
     }
@@ -132,7 +131,7 @@ static <T> Codec<ReferenceValue<T>> create(Codec<T> baseCodec, char referenceTyp
 
 <br>
 
-To decode the references into actual values. you use the `resolve(...)` method. The provided string
+To decode the references into actual values. you can use the `resolve(...)` method. The provided string
 in the function is the key of the reference value.
 
 ```java

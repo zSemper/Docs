@@ -51,6 +51,8 @@ texture size `256x256`, but can be set with `texture_width` and `texture_height`
 {
   "icon": {
     "texture": "example:textures/gui/icon",
+    "width": 16,
+    "height": 16,
     "u": 0,
     "v": 0,
     "texture_width": 32,

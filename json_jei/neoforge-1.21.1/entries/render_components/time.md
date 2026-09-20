@@ -53,7 +53,8 @@ The icon can also be an item with data components.
 <br>
 
 The icon can also be a texture. The `u` and `v` are the x and y position offset in the texture. By default, the
-texture size `256x256`, but can be set with `texture_width` and `texture_height`.
+texture size `256x256`, but can be set with `texture_width` and `texture_height`. The width and height of the icon
+is always `16x16`.
 
 ```json
 {

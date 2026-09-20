@@ -47,8 +47,8 @@ Each render component can have a `values` field where the default reference valu
 ```
 
 If a render component does not set a default value it has to be set in each recipe. To set them, recipes require an
-extra field `values`, in it the key of the render component is used to set the value. If a recipe does not have a value
-the game crashes with an error similar to this: `"com.google.gson.JsonParseException: Expected key 'time' is recipe 'example:burning/coal', but it's missing"`.
+extra field `values`, in it the key of the render component is used to set the value. If a recipe does not have a value,
+the component will be disabled from rendering in the category for that recipe and an error will be logged.
 
 ```json
 {
