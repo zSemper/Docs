@@ -30,7 +30,7 @@ Each `"key"` has to be **unique**, there should be no two render components and 
 ## Reference Values
 
 Reference values are a way to change values of render components in individual recipes. Most values of render components
-can be reference values. Reference values follow the pattern of `"s([type]:[key])"`, where the type describes the type of
+can be reference values. Reference values follow the pattern of `"$([type]:[key])"`, where the type describes the type of
 the value, like `i` is an integer or `b` is a boolean, and the key being the lookup for the actual value.
 
 Each render component can have a `values` field where the default reference values can be set.

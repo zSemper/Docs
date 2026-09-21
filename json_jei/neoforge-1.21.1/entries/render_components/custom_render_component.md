@@ -98,16 +98,16 @@ public record SpriteRenderComponent(
     }
 
     @Override
-    public void render(GuiGraphics guiGraphics, @Nullable JsonElement override, JsonObject recipeValues, double mouseX, double mouseY) {
+    public void render(GuiGraphics guiGraphics, @Nullable JsonElement override, JsonObject recipeValues, int mouseX, int mouseY) {
         if (element != null) {
             JsonJei.parseCodec(CODEC.codec(), override, component -> component.render(guiGraphics, null, recipeValues, mouseX, mouseY));
             return;
         }
 
-        int dx = decode(Codec.INT, "x", x, recipeValues);
-        int dy = decode(Codec.INT, "y", y, recipeValues);
-        int dWidth = decode(Codec.INT, "width", width, recipeValues);
-        int dHeight = decode(Codec.INT, "height", height, recipeValues);
+        int dx = decode(Codec.INT, x, recipeValues);
+        int dy = decode(Codec.INT, y, recipeValues);
+        int dWidth = decode(Codec.INT, width, recipeValues);
+        int dHeight = decode(Codec.INT, height, recipeValues);
 
         guiGraphics.blitSprite(JsonJei.validateTexture(texture), dx, dy, dWidth, dHeight);
     }
